@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: radial-gradient(circle, #000000, #0f0f0f);
+    color: #ffffff;
+    padding-top: 20px;
+}
+
+h1 {
+    margin-bottom: 40px;
+    font-size: 6rem;
+    color: #00d1ff;
+    text-align: center;
+}
+
+.calculator {
+    background: linear-gradient(145deg, #111111, #1c1c1c);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 1);
+    padding: 20px;
+    width: 320px;
+    max-width: 90%;
+}
+
+.display {
+    margin-bottom: 15px;
+}
+
+#result {
+    width: 100%;
+    height: 60px;
+    text-align: right;
+    font-size: 2rem;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    background: #1c1c1c;
+    box-shadow: inset 2px 2px 5px rgba(255, 255, 255, 0.1), inset -2px -2px 5px rgba(0, 0, 0, 0.6);
+    color: #00d1ff;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 20px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    background: #1c1c1c;
+    color: #ffffff;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 1), -3px -3px 8px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+button:active {
+    background: #292929;
+    box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.8), inset -2px -2px 5px rgba(255, 255, 255, 0.1);
+}
+
+button.operator {
+    background: #00d1ff;
+    color: #000000;
+}
+
+button.operator:active {
+    background: #008cb3;
+}
+
+button:hover {
+    background: #292929;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 5rem;
+    }
+
+    button {
+        padding: 15px;
+        font-size: 1.2rem;
+    }
+
+    #result {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 4rem;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 1rem;
+    }
+
+    #result {
+        font-size: 1.2rem;
+        height: 50px;
+    }
+}
